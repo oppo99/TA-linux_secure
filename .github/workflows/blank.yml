@@ -30,7 +30,7 @@ jobs:
           command: c
           cwd: ./
           files: |
-            ./toCompress
+            ../${{ github.event.repository.name }}
           outPath: ${{ github.event.repository.name }}.tar.gz
       - name: Carica l'artifact
         uses: actions/upload-artifact@v4
